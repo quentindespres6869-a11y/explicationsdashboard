@@ -3,33 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commande-IA - Solution de Gestion des Commandes Restaurant</title>
+  <meta name="description" content="Commande-IA révolutionne la gestion des commandes restaurant grâce à l'intelligence artificielle. Reconnaissance vocale, temps réel, SMS automatiques. À partir de 199€/mois.">
+  <title>Commande-IA — Gestion de Commandes Restaurant par l'IA</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
+
+  <!-- HEADER -->
+  <header class="header" id="header">
     <div class="header-container">
-      <div class="logo">
+      <a href="#" class="logo">
         <div class="logo-icon">
           <svg viewBox="0 0 20 20" fill="none"><path d="M3 6h14M3 10h9M3 14h11" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <span>Commande<span class="logo-accent">IA</span></span>
-      </div>
-
+      </a>
 
       <nav class="nav-menu" id="navMenu">
-  <a href="#probleme" class="nav-link">Le Problème</a>
-  <a href="#solution" class="nav-link">La Solution</a>
-  <a href="#features" class="nav-link">Fonctionnalités</a>
-  <a href="#comment-ca-marche" class="nav-link">Comment ça marche</a>
-  <a href="#rentabilite" class="nav-link">Rentabilité</a>
-  <a href="#avantages" class="nav-link">Avantages</a>
-  <a href="#demo" class="nav-link">Démo</a>
-  <a href="https://charming-inspiration-production-4827.up.railway.app/login.html" class="nav-link cta-link">Le Logiciel</a>
-</nav>
+        <a href="#probleme" class="nav-link">Le Problème</a>
+        <a href="#solution" class="nav-link">La Solution</a>
+        <a href="#features" class="nav-link">Fonctionnalités</a>
+        <a href="#comment-ca-marche" class="nav-link">Comment ça marche</a>
+        <a href="#pricing" class="nav-link">Tarifs</a>
+        <a href="#temoignages" class="nav-link">Avis</a>
+        <a href="#demo" class="nav-link">Démo</a>
+        <a href="https://charming-inspiration-production-4827.up.railway.app/login.html" class="nav-link cta-link" target="_blank" rel="noopener">Le Logiciel →</a>
+      </nav>
 
-      <button class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -37,21 +39,35 @@
     </div>
   </header>
 
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
   <main>
+
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero-content">
+      <div class="hero-content" data-animate="fadeUp">
+        <div class="hero-badge">🚀 Nouveau — Gestion IA pour restaurants</div>
         <h1>Gestion de Commandes<br><span class="accent-text">Révolutionnée par l'IA</span></h1>
-        <p class="hero-subtitle">Simplifiez la prise de commande, réduisez les erreurs, augmentez la productivité de votre restaurant</p>
-        <button class="btn btn-primary" id="btnCommencer">Commencer maintenant</button>
+        <p class="hero-subtitle">Simplifiez la prise de commande, éliminez les erreurs, boostez la productivité de votre restaurant — dès le premier jour.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-lg" id="btnCommencer">Commencer maintenant</button>
+          <button class="btn btn-outline btn-lg" id="btnVoirDemo">Voir la démo</button>
+        </div>
+        <div class="hero-trust">
+          <span>✓ Sans engagement</span>
+          <span>✓ Démo gratuite</span>
+          <span>✓ Installation en 48h</span>
+        </div>
       </div>
-      <div class="hero-image">
+      <div class="hero-image" data-animate="fadeLeft">
         <div class="dashboard-preview">
           <div class="topbar-mockup">
-            <div class="logo-mock">CommandeIA</div>
+            <div class="logo-mock">🍽️ CommandeIA</div>
             <div class="stats-mock">
-              <div class="stat-mock">En cours: 12</div>
-              <div class="stat-mock">Prêtes: 8</div>
-              <div class="stat-mock">Tps moyen: 18min</div>
+              <div class="stat-mock">🟡 En cours: <strong>12</strong></div>
+              <div class="stat-mock">🟢 Prêtes: <strong>8</strong></div>
+              <div class="stat-mock">⏱ ~18min</div>
             </div>
           </div>
           <div class="cards-mockup">
@@ -59,146 +75,165 @@
               <div class="card-header-mock">
                 <span class="avatar-mock">M</span>
                 <span class="name-mock">Mme Durand</span>
+                <span class="card-time-mock">2 min</span>
               </div>
-              <div class="card-content-mock">Burger + Frites</div>
+              <div class="card-content-mock">🍔 Burger + Frites • Sans gluten</div>
               <span class="badge-mock new">NOUVELLE</span>
             </div>
             <div class="card-mock">
               <div class="card-header-mock">
                 <span class="avatar-mock">J</span>
                 <span class="name-mock">Jean Martin</span>
+                <span class="card-time-mock">8 min</span>
               </div>
-              <div class="card-content-mock">Pizza + Salade</div>
+              <div class="card-content-mock">🍕 Pizza + Salade verte</div>
               <span class="badge-mock prep">EN PREP</span>
             </div>
-            <div class="card-mock">
+            <div class="card-mock ready-mock">
               <div class="card-header-mock">
                 <span class="avatar-mock">S</span>
                 <span class="name-mock">Sophia Laurent</span>
+                <span class="card-time-mock">15 min</span>
               </div>
-              <div class="card-content-mock">Steak frites</div>
-              <span class="badge-mock prep">EN PREP</span>
+              <div class="card-content-mock">🥩 Steak frites • Bien cuit</div>
+              <span class="badge-mock ready-badge">PRÊTE ✓</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="probleme" class="section">
-      <div class="section-header">
-        <h2>Le Problème Actuel</h2>
-        <p>Avant Commande-IA, les restaurants gèrent les commandes comme il y a 20 ans</p>
-      </div>
-      
-      <div class="problems-grid">
-        <div class="problem-card">
-          <div class="problem-icon"></div>
-          <h3>Appels Téléphoniques Permanents</h3>
-          <p>Votre personnel d'accueil est saturé par les appels, dédié uniquement aux commandes au détriment de la relation client.</p>
+    <!-- CHIFFRES CLÉS -->
+    <section class="stats-bar">
+      <div class="stats-bar-inner">
+        <div class="stat-pill">
+          <span class="stat-pill-value" data-count="98">0</span><span>%</span>
+          <span class="stat-pill-label">Précision IA</span>
         </div>
-        
-        <div class="problem-card">
-          <div class="problem-icon"></div>
-          <h3>Erreurs et Oublis Fréquents</h3>
-          <p>Les erreurs de transcription, d'allergies oubliées ou de modifications spéciales mènent à des réclamations clients.</p>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-pill-value" data-count="70">0</span><span>%</span>
+          <span class="stat-pill-label">Temps gagné</span>
         </div>
-        
-        <div class="problem-card">
-          <div class="problem-icon"></div>
-          <h3>Perte de Temps Précieux</h3>
-          <p>Répétition des informations, recherche dans les notes, pas de priorité claire = surcharge et stress d'équipe.</p>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-pill-value" data-count="3">0</span><span>x</span>
+          <span class="stat-pill-label">Plus de commandes</span>
         </div>
-        
-        <div class="problem-card">
-          <div class="problem-icon"></div>
-          <h3>Pas de Gestion d'Équipe</h3>
-          <p>Impossible de suivre qui prépare quoi, les temps de préparation réels, ou d'identifier les goulets d'étranglement.</p>
-        </div>
-
-        <div class="problem-card">
-          <div class="problem-icon"></div>
-          <h3>Aucune Donnée</h3>
-          <p>Pas de statistiques sur les commandes, les heures de pointe, les plats populaires ou les temps de service.</p>
-        </div>
-        
-        <div class="problem-card">
-          <div class="problem-icon"></div>
-          <h3>Perte de Chiffre d'Affaires</h3>
-          <p>Les clients impatients raccrochent. Les erreurs créent des remboursements. La productivité limitée = revenus limités.</p>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-pill-value" data-count="48">0</span><span>h</span>
+          <span class="stat-pill-label">Installation</span>
         </div>
       </div>
     </section>
 
+    <!-- PROBLÈME -->
+    <section id="probleme" class="section">
+      <div class="section-header">
+        <div class="section-tag">Le problème</div>
+        <h2>Les Restaurants Gèrent les Commandes<br>Comme il y a 20 Ans</h2>
+        <p>Le téléphone sonne, le serveur écrit, l'erreur arrive. Ce système est cassé.</p>
+      </div>
+
+      <div class="problems-grid">
+        <div class="problem-card" data-animate="fadeUp">
+          <div class="problem-icon">📞</div>
+          <h3>Appels Téléphoniques Permanents</h3>
+          <p>Votre personnel est saturé par les appels, dédié uniquement aux commandes au détriment de la relation client.</p>
+        </div>
+        <div class="problem-card" data-animate="fadeUp">
+          <div class="problem-icon">❌</div>
+          <h3>Erreurs et Oublis Fréquents</h3>
+          <p>Les erreurs de transcription, les allergies oubliées, les modifications ratées mènent à des réclamations clients et des plats refaits.</p>
+        </div>
+        <div class="problem-card" data-animate="fadeUp">
+          <div class="problem-icon">⏳</div>
+          <h3>Perte de Temps Précieux</h3>
+          <p>Répétition des informations, recherche dans les notes, aucune priorité claire = surcharge et stress d'équipe au quotidien.</p>
+        </div>
+        <div class="problem-card" data-animate="fadeUp">
+          <div class="problem-icon">😵</div>
+          <h3>Pas de Gestion d'Équipe</h3>
+          <p>Impossible de savoir qui prépare quoi, les temps de préparation réels, ou d'identifier les goulets d'étranglement.</p>
+        </div>
+        <div class="problem-card" data-animate="fadeUp">
+          <div class="problem-icon">📊</div>
+          <h3>Aucune Donnée Exploitable</h3>
+          <p>Pas de statistiques sur les commandes, les heures de pointe, les plats populaires ou les temps de service réels.</p>
+        </div>
+        <div class="problem-card" data-animate="fadeUp">
+          <div class="problem-icon">💸</div>
+          <h3>Perte de Chiffre d'Affaires</h3>
+          <p>Les clients impatients raccrochent. Les erreurs créent des remboursements. La productivité limitée plafonne vos revenus.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
     <section id="solution" class="section solution-section">
       <div class="section-header">
-        <h2>Commande-IA : La Solution Intelligente</h2>
-        <p>Un système automatisé et intelligent de gestion des commandes en temps réel</p>
+        <div class="section-tag">La solution</div>
+        <h2>Commande-IA : Le Système Intelligent<br>qui Transforme votre Restaurant</h2>
+        <p>Automatisé, précis, en temps réel — dès la prise de commande jusqu'au SMS client</p>
       </div>
 
       <div class="solution-container">
-        <div class="solution-text">
+        <div class="solution-text" data-animate="fadeUp">
           <h3>Comment ça change votre quotidien</h3>
           <ul class="benefits-list">
             <li>
               <span class="check-icon">✓</span>
-              <div>
-                <strong>Les clients appellent</strong> votre restaurant à tout moment, sans surcharge d'équipe
-              </div>
+              <div><strong>Les clients appellent</strong> votre restaurant à tout moment, sans surcharger votre équipe</div>
             </li>
             <li>
               <span class="check-icon">✓</span>
-              <div>
-                <strong>L'IA transcrit automatiquement</strong> la commande avec précision (Deepgram)
-              </div>
+              <div><strong>L'IA transcrit automatiquement</strong> la commande avec une précision de 98% (Deepgram)</div>
             </li>
             <li>
               <span class="check-icon">✓</span>
-              <div>
-                <strong>La commande apparaît instantanément</strong> à l'écran de l'hôte et en cuisine (Socket.io)
-              </div>
+              <div><strong>La commande apparaît instantanément</strong> à l'écran hôte et en cuisine (Socket.io)</div>
             </li>
             <li>
               <span class="check-icon">✓</span>
-              <div>
-                <strong>Chaque changement est synchronisé</strong> en temps réel entre tous les appareils
-              </div>
+              <div><strong>Chaque changement est synchronisé</strong> en temps réel sur tous les appareils</div>
             </li>
             <li>
               <span class="check-icon">✓</span>
-              <div>
-                <strong>SMS automatiques</strong> informent les clients de l'avancement (Twilio)
-              </div>
+              <div><strong>SMS automatiques</strong> informent les clients de l'avancement de leur commande (Twilio)</div>
             </li>
             <li>
               <span class="check-icon">✓</span>
-              <div>
-                <strong>Statistiques en continu</strong> sur les performances, les temps, les volumes
-              </div>
+              <div><strong>Statistiques en continu</strong> sur les performances, les temps, les volumes</div>
             </li>
           </ul>
         </div>
 
-        <div class="solution-visual">
+        <div class="solution-visual" data-animate="fadeLeft">
           <div class="comparison-cards">
             <div class="comparison-before">
-              <h4>❌ Avant</h4>
+              <h4>❌ Avant Commande-IA</h4>
               <ul class="before-list">
-                <li>Téléphone sature</li>
-                <li>Erreurs manuelles</li>
-                <li>Pas de suivi</li>
-                <li>Équipe désorganisée</li>
-                <li>Aucune donnée</li>
+                <li>📞 Téléphone sature l'équipe</li>
+                <li>✍️ Erreurs de transcription</li>
+                <li>🔍 Aucun suivi en temps réel</li>
+                <li>😤 Équipe désorganisée</li>
+                <li>📉 Aucune donnée décisionnelle</li>
+                <li>💸 Clients perdus</li>
               </ul>
             </div>
-            <div class="comparison-arrow">→</div>
+            <div class="comparison-arrow">
+              <div class="arrow-icon">→</div>
+            </div>
             <div class="comparison-after">
-              <h4>✓ Après</h4>
+              <h4>✅ Après Commande-IA</h4>
               <ul class="after-list">
-                <li>Automatisé 100%</li>
-                <li>Précision IA</li>
-                <li>Suivi en temps réel</li>
-                <li>Équipe organisée</li>
-                <li>Données complètes</li>
+                <li>🤖 Automatisé 100%</li>
+                <li>🎯 Précision IA 98%</li>
+                <li>⚡ Suivi temps réel</li>
+                <li>🧠 Équipe optimisée</li>
+                <li>📈 Données complètes</li>
+                <li>😊 Clients satisfaits</li>
               </ul>
             </div>
           </div>
@@ -206,31 +241,34 @@
       </div>
     </section>
 
+    <!-- FONCTIONNALITÉS -->
     <section id="features" class="section">
       <div class="section-header">
-        <h2>Fonctionnalités Principales</h2>
+        <div class="section-tag">Fonctionnalités</div>
+        <h2>Tout ce dont votre Restaurant a Besoin</h2>
+        <p>Une suite complète d'outils pour moderniser chaque aspect de votre activité</p>
       </div>
 
       <div class="features-grid">
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">🎙️</span>
             <h3>Reconnaissance Vocale IA</h3>
           </div>
-          <p>Technologie Deepgram de dernière génération. Capture chaque détail de la commande avec une précision > 98%.</p>
+          <p>Technologie Deepgram de dernière génération. Capture chaque détail avec une précision supérieure à 98%, même en environnement bruyant.</p>
           <ul class="feature-list">
             <li>Transcription temps réel</li>
-            <li>Détection d'allergies</li>
-            <li>Modifications automatiques</li>
+            <li>Détection automatique d'allergies</li>
+            <li>Modifications et personnalisations</li>
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">🖥️</span>
             <h3>Tableau de Bord Hôte</h3>
           </div>
-          <p>Interface intuitive pour l'accueil. Voir toutes les commandes en cours, les priorités, les temps restants.</p>
+          <p>Interface intuitive pour l'accueil. Visualisez toutes les commandes en cours, les priorités et les temps restants d'un coup d'œil.</p>
           <ul class="feature-list">
             <li>Vue des commandes en direct</li>
             <li>Gestion des priorités</li>
@@ -238,12 +276,12 @@
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">👨‍🍳</span>
             <h3>Vue Cuisine</h3>
           </div>
-          <p>Interface dédiée à la cuisine. Affiche uniquement ce qui doit être préparé, en ordre de priorité.</p>
+          <p>Interface dédiée à la cuisine. Affiche uniquement ce qui doit être préparé, dans l'ordre de priorité, sans information superflue.</p>
           <ul class="feature-list">
             <li>Commandes par section</li>
             <li>Compteur de temps</li>
@@ -251,426 +289,206 @@
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">💬</span>
             <h3>Notifications SMS</h3>
           </div>
-          <p>Vos clients reçoivent des SMS avec l'état de leur commande. Moins d'appels, plus de confiance.</p>
+          <p>Vos clients reçoivent des SMS automatiques sur l'état de leur commande. Moins d'appels entrants, plus de confiance client.</p>
           <ul class="feature-list">
             <li>Confirmation de commande</li>
             <li>État d'avancement</li>
-            <li>Prêt à retirer</li>
+            <li>Notification "prêt à retirer"</li>
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">📊</span>
             <h3>Analyse et Statistiques</h3>
           </div>
-          <p>Données complètes sur votre activité. Identifier les tendances, optimiser vos opérations.</p>
+          <p>Données complètes sur votre activité. Identifiez les tendances, optimisez vos opérations et prenez des décisions basées sur des faits.</p>
           <ul class="feature-list">
-            <li>Nombre de commandes</li>
+            <li>Nombre de commandes / heure</li>
             <li>Temps moyen de préparation</li>
-            <li>Plats populaires</li>
+            <li>Plats et heures populaires</li>
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">⚡</span>
             <h3>Synchronisation Temps Réel</h3>
           </div>
-          <p>Toutes les modifications sont synchronisées instantanément sur tous les appareils. Zéro délai.</p>
+          <p>Toutes les modifications sont synchronisées instantanément sur tous les appareils connectés. Zéro délai, zéro perte de données.</p>
           <ul class="feature-list">
-            <li>Updates en direct</li>
-            <li>Multi-appareils</li>
-            <li>Zéro perte de données</li>
+            <li>Updates en direct (Socket.io)</li>
+            <li>Multi-appareils illimité</li>
+            <li>Connexion sécurisée</li>
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">📦</span>
             <h3>Gestion des Stocks</h3>
           </div>
-          <p>Suivi automatique et en temps réel de vos stocks. Sachez toujours ce que vous avez en cuisine et ce qui manque.</p>
+          <p>Suivi automatique et en temps réel de vos stocks. Sachez toujours ce que vous avez en cuisine et recevez des alertes avant la rupture.</p>
           <ul class="feature-list">
             <li>Suivi en temps réel</li>
-            <li>Alertes de rupture</li>
-            <li>Calcul automatique</li>
+            <li>Alertes de rupture imminente</li>
+            <li>Calcul automatique à la commande</li>
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">💳</span>
             <h3>Paiement et Facturation</h3>
           </div>
-          <p>Intégration complète des modes de paiement. Factures automatiques, reçus numériques, historique des transactions.</p>
+          <p>Intégration complète des modes de paiement. Factures automatiques, reçus numériques, historique complet des transactions.</p>
           <ul class="feature-list">
             <li>Carte bancaire</li>
-            <li>Virement & Espèces</li>
-            <li>Factures automatiques</li>
+            <li>Virement & espèces</li>
+            <li>Factures automatiques PDF</li>
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">⭐</span>
             <h3>Programme Fidélité</h3>
           </div>
-          <p>Système de points et promotions automatiques. Fidélisez vos clients et augmentez vos ventes répétées.</p>
+          <p>Système de points et promotions automatiques. Fidélisez vos clients existants et augmentez votre taux de commandes répétées.</p>
           <ul class="feature-list">
-            <li>Points de fidélité</li>
-            <li>Codes promo auto</li>
+            <li>Points de fidélité auto</li>
+            <li>Codes promo générés</li>
             <li>Statistiques clients</li>
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">👥</span>
             <h3>CRM Clients</h3>
           </div>
-          <p>Base de données clients centralisée. Historique des commandes, préférences, adresses, numéros de téléphone.</p>
+          <p>Base de données clients centralisée. Historique des commandes, préférences alimentaires, adresses et numéros de téléphone.</p>
           <ul class="feature-list">
-            <li>Profils détaillés</li>
+            <li>Profils clients détaillés</li>
             <li>Historique complet</li>
-            <li>Personnalisation</li>
+            <li>Personnalisation du service</li>
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">🛵</span>
             <h3>Gestion Livraison</h3>
           </div>
-          <p>Intégration avec les services de livraison. Suivi en temps réel, assignation automatique des livreurs.</p>
+          <p>Intégration avec vos livreurs. Suivi en temps réel des livraisons, assignation automatique et notifications client à chaque étape.</p>
           <ul class="feature-list">
             <li>Livreurs intégrés</li>
-            <li>Suivi en direct</li>
+            <li>Suivi GPS en direct</li>
             <li>Notifications client</li>
           </ul>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card" data-animate="fadeUp">
           <div class="feature-header">
-            <span class="feature-icon"></span>
+            <span class="feature-icon">📱</span>
             <h3>Application Mobile Client</h3>
           </div>
-          <p>Les clients commandent directement via l'app. Interface intuitive, historique des commandes, paiement intégré.</p>
+          <p>Les clients commandent directement via l'app ou une page web. Interface intuitive, paiement intégré, suivi en temps réel.</p>
           <ul class="feature-list">
-            <li>Commande en 30 sec</li>
-            <li>Suivi en direct</li>
+            <li>Commande en moins de 30s</li>
+            <li>Suivi de livraison en direct</li>
             <li>Paiement sécurisé</li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- COMMENT ÇA MARCHE -->
     <section id="comment-ca-marche" class="section process-section">
       <div class="section-header">
+        <div class="section-tag">Processus</div>
         <h2>Comment Ça Marche</h2>
-        <p>Un flux simplifié et automatisé de bout en bout</p>
+        <p>Un flux entièrement automatisé de bout en bout — de l'appel client au SMS de confirmation</p>
       </div>
 
       <div class="process-timeline">
-        <div class="process-step">
+        <div class="process-step" data-animate="fadeUp">
           <div class="step-number">1</div>
           <div class="step-content">
-            <h3>Client appelle</h3>
-            <p>Le client appelle votre restaurant. Il parle sa commande normalement, comme d'habitude.</p>
+            <div class="step-icon">📞</div>
+            <h3>Le client appelle</h3>
+            <p>Le client compose votre numéro habituel. Il parle sa commande normalement, comme d'habitude — aucun changement de son côté.</p>
           </div>
         </div>
 
-        <div class="process-arrow">↓</div>
+        <div class="process-connector"></div>
 
-        <div class="process-step">
+        <div class="process-step" data-animate="fadeUp">
           <div class="step-number">2</div>
           <div class="step-content">
+            <div class="step-icon">🤖</div>
             <h3>Transcription IA</h3>
-            <p>Deepgram convertit l'appel en texte avec analyse automatique (items, allergies, modifications).</p>
+            <p>Deepgram convertit l'appel en texte structuré avec analyse automatique : items, quantités, allergies, modifications spéciales.</p>
           </div>
         </div>
 
-        <div class="process-arrow">↓</div>
+        <div class="process-connector"></div>
 
-        <div class="process-step">
+        <div class="process-step" data-animate="fadeUp">
           <div class="step-number">3</div>
           <div class="step-content">
-            <h3>Apparaît à l'écran</h3>
-            <p>La commande structurée apparaît immédiatement sur le dashboard de l'hôte via Socket.io.</p>
+            <div class="step-icon">🖥️</div>
+            <h3>Affichage instantané</h3>
+            <p>La commande structurée apparaît immédiatement sur le tableau de bord de l'hôte via Socket.io — aucune saisie manuelle.</p>
           </div>
         </div>
 
-        <div class="process-arrow">↓</div>
+        <div class="process-connector"></div>
 
-        <div class="process-step">
+        <div class="process-step" data-animate="fadeUp">
           <div class="step-number">4</div>
           <div class="step-content">
+            <div class="step-icon">👨‍🍳</div>
             <h3>Distribution cuisine</h3>
-            <p>L'équipe cuisine reçoit automatiquement ce qu'elle doit préparer, organisé par priorité.</p>
+            <p>L'équipe cuisine reçoit automatiquement sa vue avec uniquement ce qu'elle doit préparer, organisé par priorité et section.</p>
           </div>
         </div>
 
-        <div class="process-arrow">↓</div>
+        <div class="process-connector"></div>
 
-        <div class="process-step">
+        <div class="process-step" data-animate="fadeUp">
           <div class="step-number">5</div>
           <div class="step-content">
-            <h3>SMS client</h3>
-            <p>Le client reçoit des SMS pour l'état de sa commande. Votre équipe peut se concentrer sur le service.</p>
+            <div class="step-icon">💬</div>
+            <h3>SMS client automatique</h3>
+            <p>Le client reçoit un SMS de confirmation, puis un SMS quand sa commande est prête. Votre équipe se concentre sur la cuisine.</p>
           </div>
         </div>
 
-        <div class="process-arrow">↓</div>
+        <div class="process-connector"></div>
 
-        <div class="process-step">
+        <div class="process-step" data-animate="fadeUp">
           <div class="step-number">6</div>
           <div class="step-content">
-            <h3>Données stockées</h3>
-            <p>Chaque commande est enregistrée pour les statistiques, l'historique et les améliorations futures.</p>
+            <div class="step-icon">📈</div>
+            <h3>Données enregistrées</h3>
+            <p>Chaque commande est analysée et stockée pour alimenter vos statistiques, historiques et recommandations d'optimisation.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="section faq-section">
-      <div class="section-header">
-        <h2>Questions Fréquemment Posées</h2>
-        <p>Tout ce que vous devez savoir sur Commande-IA</p>
-      </div>
-
-      <div class="faq-container">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span> Combien de temps pour mettre en place ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Plan Self-Service :</strong> 2-3 jours (vous configurez vous-même via notre interface intuitive)</p>
-            <p><strong>Plan Assistance Complète :</strong> 1-2 jours (notre équipe configure tout et vous forme)</p>
-            <p>Vous pouvez commencer à recevoir des commandes en moins d'une semaine !</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span> Est-ce compatible avec mes systèmes existants ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Oui ! Commande-IA s'intègre avec :</p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-              <li>✓ Les caisses enregistreuses (NCR, PAX, Ingenico, etc.)</li>
-              <li>✓ Les services de livraison (Deliveroo, Uber Eats, Glovo, etc.)</li>
-              <li>✓ Les systèmes de gestion (Marginalis, Koala, etc.)</li>
-              <li>✓ Les numéros de téléphone existants</li>
-            </ul>
-            <p style="margin-top: 10px;">Notre équipe technique gère toutes les intégrations pour vous.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span> Les clients doivent-ils télécharger une app ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Non, pas obligatoire !</strong> Les clients peuvent :</p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-              <li>✓ Appeler directement votre numéro (l'IA prend la commande)</li>
-              <li>✓ Commander via une page web simple</li>
-              <li>✓ Utiliser l'app mobile (optionnelle, pour plus de confort)</li>
-            </ul>
-            <p style="margin-top: 10px;">Vous décidez selon vos clients !</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span> Mes données sont-elles sécurisées ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Absolument !</strong> Commande-IA respecte :</p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-              <li>✓ RGPD (Protection des données clients)</li>
-              <li>✓ PCI DSS (Sécurité des paiements)</li>
-              <li>✓ Chiffrement end-to-end de vos données</li>
-              <li>✓ Serveurs en France (data centers sécurisés)</li>
-              <li>✓ Sauvegardes automatiques quotidiennes</li>
-            </ul>
-            <p style="margin-top: 10px;">Vos données vous appartiennent 100%.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span> Quel support offrez-vous ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Plan Self-Service (199€) :</strong></p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-              <li>• Support par email (réponse sous 24h)</li>
-              <li>• Documentation complète & vidéos tuto</li>
-              <li>• Communauté utilisateurs</li>
-            </ul>
-            <p style="margin-top: 15px;"><strong>Plan Assistance Complète (249€) :</strong></p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-              <li>• Support prioritaire 24/7 par téléphone/chat</li>
-              <li>• Formation personnalisée</li>
-              <li>• Dédié account manager</li>
-              <li>• Mises à jour prioritaires</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span> Y a-t-il des frais cachés ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Non, zéro frais caché !</strong></p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-              <li>✓ 199€ ou 249€/mois, c'est tout</li>
-              <li>✓ Pas de frais de mise en place</li>
-              <li>✓ Pas de frais de transaction</li>
-              <li>✓ Pas d'engagement long terme (annulez quand vous voulez)</li>
-              <li>✓ Réduction au premier jour</li>
-              <li>✓ Réajustement possible si on atteind une masse d'appel excessive (d'un mois à l'autre)</li>
-            </ul>
-            <p style="margin-top: 10px;">Transparence totale.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span> Combien de commandes pouvez-vous traiter ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Illimité !</strong> Notre infrastructure peut gérer :</p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-              <li>• 100+ commandes/jour sans souci</li>
-              <li>• Pics de charge sans ralentissement</li>
-              <li>• Multi-restaurants sur un seul compte (plan Enterprise)</li>
-            </ul>
-            <p style="margin-top: 10px;">Plus vous avez de commandes, plus ça se rentabilise !</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span> Comment annuler mon abonnement ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Très simple !</strong></p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-              <li>• Aucun préavis nécessaire</li>
-              <li>• 1 clic pour annuler depuis votre dashboard</li>
-              <li>• Pas de pénalité</li>
-              <li>• Vos données vous sont restituées</li>
-            </ul>
-            <p style="margin-top: 10px;">Nous voulons que vous restiez parce que vous aimez le produit, pas par obligation !</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
-            <span> Allez-vous former mon équipe ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p><strong>Oui, toujours !</strong></p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-              <li>✓ Formation live avec votre équipe (1-2h)</li>
-              <li>✓ Vidéos tuto personnalisées</li>
-              <li>✓ Documentation détaillée</li>
-              <li>✓ Support continu pendant 30 jours</li>
-              <li>✓ Je serais joignable 7j/7</li>
-            </ul>
-            <p style="margin-top: 10px;">Plan Assistance Complète : formation sans coût supplémentaire incluse.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section pricing-section">
-      <div class="section-header">
-        <h2>Tarification Simple et Transparente</h2>
-        <p>Pas de frais cachés, pas d'engagement long terme. Annulez quand vous voulez.</p>
-      </div>
-
-      <div class="pricing-container">
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <h3>Self-Service</h3>
-            <div class="price">199€<span>/mois</span></div>
-          </div>
-          <div class="pricing-description">Vous gérez votre configuration</div>
-          <ul class="pricing-list">
-            <li>✓ Configuration autonome</li>
-            <li>✓ Toutes les fonctionnalités</li>
-            <li>✓ Support par email</li>
-            <li>✓ Mises à jour incluses</li>
-            <li>✓ API d'intégration</li>
-            <li>✓ Dashboard complet</li>
-          </ul>
-          <button class="btn btn-secondary btn-full pricing-btn">Commencer</button>
-        </div>
-
-        <div class="pricing-card pricing-popular">
-          <div class="pricing-badge">PLUS POPULAIRE</div>
-          <div class="pricing-header">
-            <h3>Assistance Complète</h3>
-            <div class="price">249€<span>/mois</span></div>
-          </div>
-          <div class="pricing-description">Nous configurons tout pour vous</div>
-          <ul class="pricing-list">
-            <li>✓ Installation par notre équipe</li>
-            <li>✓ Formation personnalisée</li>
-            <li>✓ Support prioritaire 24/7</li>
-            <li>✓ Toutes les fonctionnalités</li>
-            <li>✓ Assistance migration données</li>
-            <li>✓ Optimisation continue</li>
-          </ul>
-          <button class="btn btn-primary btn-full pricing-btn">Commencer</button>
-        </div>
-
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <h3>Enterprise</h3>
-            <div class="price">Sur devis</div>
-          </div>
-          <div class="pricing-description">Pour les chaînes de restaurants</div>
-          <ul class="pricing-list">
-            <li>✓ Multi-restaurants</li>
-            <li>✓ Intégrations custom</li>
-            <li>✓ Dédié account manager</li>
-            <li>✓ SLA garanti 99.9%</li>
-            <li>✓ Formation équipe</li>
-            <li>✓ Support illimité</li>
-          </ul>
-          <button class="btn btn-secondary btn-full pricing-btn">Demander un devis</button>
-        </div>
-      </div>
-
-      <div class="pricing-info">
-        <p> <strong>Tous les plans incluent :</strong> Reconnaissance vocale IA, Dashboard temps réel, SMS clients, Gestion stocks, Statistiques complètes, Support technique</p>
-        <p style="margin-top: 12px;">📅 <strong>Garantie :</strong> Première fois ? Bénéficez d'une réduction de 25% sur votre premier mois (toutes catégories)</p>
-      </div>
-    </section>
-
+    <!-- RENTABILITÉ -->
     <section id="rentabilite" class="section rentabilite-section">
       <div class="section-header">
+        <div class="section-tag">ROI</div>
         <h2>Découvrez Votre Rentabilité</h2>
-        <p>Faites défiler le curseur pour voir vos gains potentiels</p>
+        <p>Faites glisser le curseur pour voir vos gains potentiels dans le temps</p>
       </div>
 
       <div class="rentabilite-container">
@@ -678,8 +496,8 @@
           <input type="range" id="rentabiliteSlider" min="0" max="100" value="0" class="rentabilite-slider">
           <div class="slider-labels">
             <span>Jour 1</span>
-            <span>Semaine 1</span>
-            <span>2 Semaines</span>
+            <span>Sem. 1</span>
+            <span>2 Sem.</span>
             <span>Mois 1</span>
             <span>3 Mois</span>
             <span>6 Mois</span>
@@ -689,34 +507,31 @@
 
         <div class="rentabilite-stats">
           <div class="stat-box">
-            <div class="stat-icon">⏱</div>
+            <div class="stat-icon">⏱️</div>
             <div class="stat-content">
               <div class="stat-title">Temps Économisé</div>
               <div class="stat-value" id="statTemps">0</div>
               <div class="stat-unit">heures/mois</div>
             </div>
           </div>
-
           <div class="stat-box">
-            <div class="stat-icon"></div>
+            <div class="stat-icon">🛒</div>
             <div class="stat-content">
               <div class="stat-title">Commandes Supplémentaires</div>
               <div class="stat-value" id="statCommandes">0</div>
               <div class="stat-unit">par mois</div>
             </div>
           </div>
-
-          <div class="stat-box">
-            <div class="stat-icon"></div>
+          <div class="stat-box highlight-stat">
+            <div class="stat-icon">💰</div>
             <div class="stat-content">
               <div class="stat-title">Revenu Additionnel</div>
               <div class="stat-value" id="statRevenu">0€</div>
               <div class="stat-unit">par mois</div>
             </div>
           </div>
-
           <div class="stat-box">
-            <div class="stat-icon"></div>
+            <div class="stat-icon">📈</div>
             <div class="stat-content">
               <div class="stat-title">ROI Estimé</div>
               <div class="stat-value" id="statROI">0%</div>
@@ -726,71 +541,338 @@
         </div>
 
         <div class="rentabilite-description" id="rentabiliteDesc">
-          <p> Faites défiler le curseur pour voir comment votre restaurant deviendra rentable avec Commande-IA</p>
+          <p>👆 Faites glisser le curseur pour voir comment Commande-IA rentabilise votre restaurant</p>
         </div>
       </div>
     </section>
 
+    <!-- AVANTAGES -->
     <section id="avantages" class="section advantages-section">
       <div class="section-header">
-        <h2>Avantages Concrets pour Votre Restaurant</h2>
+        <div class="section-tag">Avantages</div>
+        <h2>Ce que Vous Gagnez Concrètement</h2>
+        <p>Des bénéfices mesurables dès les premières semaines d'utilisation</p>
       </div>
 
       <div class="advantages-grid">
-        <div class="advantage-item">
-          <div class="advantage-icon"></div>
+        <div class="advantage-item" data-animate="fadeUp">
+          <div class="advantage-icon">⚡</div>
           <h3>Gagnez du Temps</h3>
-          <p>Réduisez le temps de prise de commande de <strong>70%</strong>. Vos équipes se concentrent sur le service, pas sur les notes.</p>
+          <p>Réduisez le temps de prise de commande de <strong>70%</strong>. Vos équipes se concentrent sur le service, pas sur les notes manuscrites.</p>
         </div>
-
-        <div class="advantage-item">
-          <div class="advantage-icon"></div>
+        <div class="advantage-item" data-animate="fadeUp">
+          <div class="advantage-icon">🎯</div>
           <h3>Zéro Erreur</h3>
-          <p>L'IA détecte les allergies et modifications. Fini les plats refaits et les clients mécontents.</p>
+          <p>L'IA détecte les allergies et modifications. Fini les plats refaits, les remboursements et les clients mécontents.</p>
         </div>
-
-        <div class="advantage-item">
-          <div class="advantage-icon"></div>
+        <div class="advantage-item" data-animate="fadeUp">
+          <div class="advantage-icon">📈</div>
           <h3>Plus de Commandes</h3>
-          <p>Votre équipe gère <strong>3x plus de commandes</strong> avec le même nombre de personnes.</p>
+          <p>Votre équipe traite <strong>3x plus de commandes</strong> avec le même nombre de personnes, sans stress supplémentaire.</p>
         </div>
-
-        <div class="advantage-item">
-          <div class="advantage-icon"></div>
+        <div class="advantage-item" data-animate="fadeUp">
+          <div class="advantage-icon">😊</div>
           <h3>Clients Satisfaits</h3>
-          <p>Service rapide, précis et fiable. Les clients reviennent et recommandent votre restaurant.</p>
+          <p>Service rapide, précis et fiable. Les clients reviennent et recommandent votre restaurant à leur entourage.</p>
         </div>
-
-        <div class="advantage-item">
-          <div class="advantage-icon"></div>
+        <div class="advantage-item" data-animate="fadeUp">
+          <div class="advantage-icon">🧠</div>
           <h3>Décisions Basées sur Données</h3>
-          <p>Quels plats sont populaires ? Quels sont les pics de commandes ? Optimisez votre menu et vos stocks.</p>
+          <p>Quels plats sont populaires ? Quand sont vos pics ? Optimisez votre menu, vos stocks et vos horaires en toute confiance.</p>
         </div>
-
-        <div class="advantage-item">
-          <div class="advantage-icon"></div>
+        <div class="advantage-item" data-animate="fadeUp">
+          <div class="advantage-icon">🏆</div>
           <h3>Équipe Motivée</h3>
-          <p>Moins de stress, plus d'organisation, meilleur ambiance. Votre équipe sera plus heureuse et performante.</p>
+          <p>Moins de stress, plus d'organisation, meilleure ambiance. Une équipe heureuse est une équipe plus performante et fidèle.</p>
         </div>
       </div>
     </section>
 
+    <!-- TÉMOIGNAGES -->
+    <section id="temoignages" class="section temoignages-section">
+      <div class="section-header">
+        <div class="section-tag">Témoignages</div>
+        <h2>Ce que Disent nos Restaurants</h2>
+        <p>Des gérants qui ont transformé leur quotidien avec Commande-IA</p>
+      </div>
+
+      <div class="temoignages-grid">
+        <div class="temoignage-card" data-animate="fadeUp">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="temoignage-text">"En 3 semaines, mes équipes ont arrêté de courir dans tous les sens. On traite le double de commandes aux heures de pointe sans chaos. L'installation a pris moins de 48h."</p>
+          <div class="temoignage-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <strong>Marc Leblanc</strong>
+              <span>Gérant — Brasserie Le Cèdre, Lyon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="temoignage-card featured-temoignage" data-animate="fadeUp">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="temoignage-text">"On a réduit nos erreurs de commande à zéro depuis le premier mois. Les SMS automatiques ont divisé nos appels entrants par 4. Le ROI était là dès le mois 1."</p>
+          <div class="temoignage-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <strong>Sophie Arnaud</strong>
+              <span>Propriétaire — Restaurant Le Jardin, Bordeaux</span>
+            </div>
+          </div>
+          <div class="temoignage-badge">⭐ Recommandé</div>
+        </div>
+
+        <div class="temoignage-card" data-animate="fadeUp">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="temoignage-text">"J'étais sceptique au départ, mais les chiffres parlent d'eux-mêmes : +35% de commandes traitées, -60% de stress pour mon équipe. Je recommande sans hésiter."</p>
+          <div class="temoignage-author">
+            <div class="author-avatar">T</div>
+            <div class="author-info">
+              <strong>Thomas Renaud</strong>
+              <span>Chef — Pizzeria Bella Vista, Marseille</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARIFICATION -->
+    <section id="pricing" class="section pricing-section">
+      <div class="section-header">
+        <div class="section-tag">Tarifs</div>
+        <h2>Tarification Simple et Transparente</h2>
+        <p>Pas de frais cachés, pas d'engagement. Annulez quand vous voulez.</p>
+      </div>
+
+      <div class="pricing-container">
+        <div class="pricing-card" data-animate="fadeUp">
+          <div class="pricing-header">
+            <h3>Self-Service</h3>
+            <div class="price">199€<span>/mois</span></div>
+          </div>
+          <div class="pricing-description">Vous configurez, vous pilotez</div>
+          <ul class="pricing-list">
+            <li>✓ Configuration autonome guidée</li>
+            <li>✓ Toutes les fonctionnalités incluses</li>
+            <li>✓ Support par email (réponse &lt; 24h)</li>
+            <li>✓ Mises à jour automatiques</li>
+            <li>✓ API d'intégration complète</li>
+            <li>✓ Dashboard temps réel</li>
+          </ul>
+          <button class="btn btn-secondary btn-full pricing-btn">Commencer en Self-Service</button>
+        </div>
+
+        <div class="pricing-card pricing-popular" data-animate="fadeUp">
+          <div class="pricing-badge">⭐ PLUS POPULAIRE</div>
+          <div class="pricing-header">
+            <h3>Assistance Complète</h3>
+            <div class="price">249€<span>/mois</span></div>
+          </div>
+          <div class="pricing-description">On configure tout pour vous</div>
+          <ul class="pricing-list">
+            <li>✓ Installation par notre équipe</li>
+            <li>✓ Formation personnalisée incluse</li>
+            <li>✓ Support prioritaire 24/7</li>
+            <li>✓ Toutes les fonctionnalités</li>
+            <li>✓ Assistance migration de données</li>
+            <li>✓ Optimisation continue du système</li>
+          </ul>
+          <button class="btn btn-primary btn-full pricing-btn">Commencer avec Assistance</button>
+        </div>
+
+        <div class="pricing-card" data-animate="fadeUp">
+          <div class="pricing-header">
+            <h3>Enterprise</h3>
+            <div class="price enterprise-price">Sur devis</div>
+          </div>
+          <div class="pricing-description">Pour les chaînes de restaurants</div>
+          <ul class="pricing-list">
+            <li>✓ Multi-restaurants sur un compte</li>
+            <li>✓ Intégrations sur-mesure</li>
+            <li>✓ Account manager dédié</li>
+            <li>✓ SLA garanti 99.9%</li>
+            <li>✓ Formation équipe complète</li>
+            <li>✓ Support illimité prioritaire</li>
+          </ul>
+          <button class="btn btn-secondary btn-full pricing-btn">Demander un devis</button>
+        </div>
+      </div>
+
+      <div class="pricing-info">
+        <div class="pricing-info-row">
+          <span>✅ <strong>Tous les plans incluent :</strong> Reconnaissance vocale IA • Dashboard temps réel • SMS clients • Gestion stocks • Statistiques complètes</span>
+        </div>
+        <div class="pricing-info-row highlight-row">
+          <span>🎁 <strong>Offre de bienvenue :</strong> −25% sur votre premier mois, toutes formules confondues</span>
+        </div>
+        <div class="pricing-info-row">
+          <span>📞 <strong>Volume élevé ?</strong> Tarif ajusté au-delà de 85 appels/jour — nous adaptons le plan à votre activité</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq-section">
+      <div class="section-header">
+        <div class="section-tag">FAQ</div>
+        <h2>Questions Fréquemment Posées</h2>
+        <p>Tout ce que vous devez savoir sur Commande-IA</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>⏱️ Combien de temps pour mettre en place ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Self-Service :</strong> 2-3 jours — vous configurez via notre interface intuitive avec documentation complète.</p>
+            <p><strong>Assistance Complète :</strong> 24 à 48h — notre équipe configure tout et vous forme sur place ou en visio.</p>
+            <p>Vous pouvez commencer à recevoir des commandes en moins d'une semaine !</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>🔌 Est-ce compatible avec mes systèmes existants ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Oui ! Commande-IA s'intègre avec :</p>
+            <ul style="margin-left:20px;margin-top:10px;">
+              <li>✓ Caisses enregistreuses (NCR, PAX, Ingenico, etc.)</li>
+              <li>✓ Plateformes de livraison (Deliveroo, Uber Eats, Glovo)</li>
+              <li>✓ Logiciels de gestion (Marginalis, Koala, etc.)</li>
+              <li>✓ Votre numéro de téléphone existant</li>
+            </ul>
+            <p style="margin-top:10px;">Notre équipe technique gère toutes les intégrations pour vous.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>📱 Les clients doivent-ils télécharger une app ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Non, pas obligatoire !</strong> Les clients peuvent :</p>
+            <ul style="margin-left:20px;margin-top:10px;">
+              <li>✓ Appeler directement votre numéro (l'IA prend la commande)</li>
+              <li>✓ Commander via une page web simple (lien ou QR code)</li>
+              <li>✓ Utiliser l'app mobile (optionnelle, pour plus de confort)</li>
+            </ul>
+            <p style="margin-top:10px;">Vous choisissez ce qui convient le mieux à votre clientèle.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>🔒 Mes données sont-elles sécurisées ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Absolument.</strong> Commande-IA respecte :</p>
+            <ul style="margin-left:20px;margin-top:10px;">
+              <li>✓ RGPD — protection complète des données clients</li>
+              <li>✓ PCI DSS — sécurité des paiements certifiée</li>
+              <li>✓ Chiffrement end-to-end de toutes vos données</li>
+              <li>✓ Serveurs hébergés en France</li>
+              <li>✓ Sauvegardes automatiques quotidiennes</li>
+            </ul>
+            <p style="margin-top:10px;">Vos données vous appartiennent à 100%. Vous pouvez les exporter à tout moment.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>🎓 Allez-vous former mon équipe ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Oui, toujours !</strong></p>
+            <ul style="margin-left:20px;margin-top:10px;">
+              <li>✓ Formation live avec votre équipe (1 à 2h)</li>
+              <li>✓ Vidéos tutoriels personnalisées</li>
+              <li>✓ Documentation détaillée</li>
+              <li>✓ Support continu pendant 30 jours post-installation</li>
+              <li>✓ Joignable 7j/7 en cas de besoin urgent</li>
+            </ul>
+            <p style="margin-top:10px;">Plan Assistance Complète : formation incluse sans surcoût.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>💸 Y a-t-il des frais cachés ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Non, zéro frais caché.</strong></p>
+            <ul style="margin-left:20px;margin-top:10px;">
+              <li>✓ 199€ ou 249€/mois — c'est tout</li>
+              <li>✓ Pas de frais de mise en place</li>
+              <li>✓ Pas de commission par transaction</li>
+              <li>✓ Pas d'engagement long terme</li>
+              <li>✓ Réduction de 25% le premier mois</li>
+              <li>✓ Ajustement possible si volume d'appels exceptionnel</li>
+            </ul>
+            <p style="margin-top:10px;">Transparence totale. Pas de surprises.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>🔄 Comment annuler mon abonnement ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Très simple et sans pénalité.</strong></p>
+            <ul style="margin-left:20px;margin-top:10px;">
+              <li>• Aucun préavis nécessaire</li>
+              <li>• 1 clic depuis votre tableau de bord</li>
+              <li>• Pas de pénalité de résiliation</li>
+              <li>• Vos données vous sont restituées en intégralité</li>
+            </ul>
+            <p style="margin-top:10px;">On préfère que vous restiez parce que vous aimez le produit, pas par contrainte.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>🚀 Combien de commandes pouvez-vous traiter ?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Illimité !</strong> Notre infrastructure gère :</p>
+            <ul style="margin-left:20px;margin-top:10px;">
+              <li>• 100+ commandes/jour sans souci sur les plans standard</li>
+              <li>• Pics de charge (déjeuner, soirée) sans ralentissement</li>
+              <li>• Multi-restaurants sur un compte unique (Enterprise)</li>
+            </ul>
+            <p style="margin-top:10px;">Plus vous avez de commandes, plus le ROI est rapide !</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DÉMO INTERACTIVE -->
     <section id="demo" class="section demo-section">
       <div class="section-header">
+        <div class="section-tag">Démo</div>
         <h2>Démo Interactive</h2>
-        <p>Voyez le système en action avec des commandes en temps réel</p>
+        <p>Simulez le système en temps réel — ajoutez des commandes et voyez la magie opérer</p>
       </div>
 
       <div class="demo-container">
         <div class="demo-controls">
-          <button class="demo-btn" id="btnAdd">+ Ajouter une commande</button>
-          <button class="demo-btn" id="btnUpdate">📝 Marquer comme prête</button>
-          <button class="demo-btn" id="btnClear">🗑️ Effacer tout</button>
+          <button class="demo-btn" id="btnAdd">➕ Ajouter une commande</button>
+          <button class="demo-btn demo-btn-secondary" id="btnUpdate">📝 Avancer le statut</button>
+          <button class="demo-btn demo-btn-danger" id="btnClear">🗑️ Effacer tout</button>
         </div>
 
         <div class="demo-dashboard">
           <div class="demo-header">
-            <div class="demo-logo">CommandeIA - Hôte</div>
+            <div class="demo-logo">🍽️ CommandeIA — Hôte</div>
             <div class="demo-stats">
               <div class="demo-stat">
                 <span class="demo-stat-label">En cours:</span>
@@ -798,73 +880,85 @@
               </div>
               <div class="demo-stat">
                 <span class="demo-stat-label">Prêtes:</span>
-                <span class="demo-stat-value" id="demo-ready">0</span>
+                <span class="demo-stat-value ready-count" id="demo-ready">0</span>
               </div>
             </div>
           </div>
-
           <div class="demo-cards" id="demo-orders">
             <div class="demo-empty">
+              <div class="demo-empty-icon">📋</div>
               <p>Aucune commande pour le moment</p>
-              <p style="font-size: 12px; color: #9ab89a; margin-top: 10px;">Cliquez sur "Ajouter une commande" pour commencer</p>
+              <p class="demo-empty-hint">Cliquez sur "Ajouter une commande" pour commencer la simulation</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- STACK TECHNOLOGIQUE -->
     <section class="section tech-section">
       <div class="section-header">
+        <div class="section-tag">Technologie</div>
         <h2>Stack Technologique</h2>
-        <p>Construit avec les meilleures technologies du marché</p>
+        <p>Construit avec les meilleures technologies du marché pour une fiabilité maximale</p>
       </div>
 
       <div class="tech-grid">
-        <div class="tech-card">
-          <h3> Deepgram</h3>
-          <p>API de reconnaissance vocale IA. Transcription ultra-précise en temps réel, détection d'accents et de bruits de fond.</p>
+        <div class="tech-card" data-animate="fadeUp">
+          <div class="tech-logo">🎙️</div>
+          <h3>Deepgram</h3>
+          <p>API de reconnaissance vocale IA de pointe. Transcription ultra-précise en temps réel, robuste aux accents et aux bruits de fond.</p>
         </div>
-
-        <div class="tech-card">
-          <h3> Express.js</h3>
-          <p>Framework web performant. Gère les requêtes, la logique métier et la synchronisation des données.</p>
+        <div class="tech-card" data-animate="fadeUp">
+          <div class="tech-logo">⚡</div>
+          <h3>Express.js</h3>
+          <p>Framework web haute performance. Gère les requêtes, la logique métier et la synchronisation des données entre les appareils.</p>
         </div>
-
-        <div class="tech-card">
-          <h3> Socket.io</h3>
-          <p>Communication bidirectionnelle en temps réel. Les changements sont poussés instantanément à tous les clients.</p>
+        <div class="tech-card" data-animate="fadeUp">
+          <div class="tech-logo">🔄</div>
+          <h3>Socket.io</h3>
+          <p>Communication bidirectionnelle en temps réel. Les changements sont poussés instantanément sur tous les clients connectés.</p>
         </div>
-
-        <div class="tech-card">
-          <h3> Twilio</h3>
-          <p>Plateforme de communication. Envoie automatiquement les SMS de confirmation et de suivi aux clients.</p>
+        <div class="tech-card" data-animate="fadeUp">
+          <div class="tech-logo">💬</div>
+          <h3>Twilio</h3>
+          <p>Plateforme de communication cloud. Envoie automatiquement les SMS de confirmation et de suivi directement aux clients.</p>
         </div>
-
-        <div class="tech-card">
-          <h3> Sharp</h3>
-          <p>Traitement d'images haute performance. Optimise et transforme les images rapidement.</p>
+        <div class="tech-card" data-animate="fadeUp">
+          <div class="tech-logo">🖼️</div>
+          <h3>Sharp</h3>
+          <p>Traitement d'images haute performance. Optimise les visuels, génère les QR codes et transforme les documents rapidement.</p>
         </div>
-
-        <div class="tech-card">
-          <h3> Node.js</h3>
-          <p>Runtime JavaScript. Plateforme robuste et scalable pour exécuter l'application serveur 24/7.</p>
+        <div class="tech-card" data-animate="fadeUp">
+          <div class="tech-logo">🟢</div>
+          <h3>Node.js</h3>
+          <p>Runtime JavaScript asynchrone. Plateforme robuste et scalable pour faire tourner l'application serveur 24h/24, 7j/7.</p>
         </div>
       </div>
     </section>
 
+    <!-- CTA FINAL -->
     <section id="essai-gratuit" class="section cta-section">
       <div class="cta-content">
-        <h2>Prêt à transformer votre restaurant ?</h2>
-        <p>Rejoignez les restaurants qui ont choisi l'avenir</p>
-        
+        <div class="cta-badge">🎁 −25% sur votre premier mois</div>
+        <h2>Prêt à Transformer votre Restaurant ?</h2>
+        <p>Rejoignez les restaurateurs qui ont choisi l'avenir de la gestion de commandes</p>
+
         <div class="cta-buttons">
-          <button class="btn btn-primary btn-lg btn-full" id="btnPartant">Je suis partant(e) !!</button>
-          <button class="btn btn-secondary btn-lg btn-full" id="btnSavoirPlus">En savoir plus</button>
+          <button class="btn btn-white btn-lg" id="btnPartant">Je suis partant(e) !</button>
+          <button class="btn btn-outline-white btn-lg" id="btnSavoirPlus">En savoir plus</button>
         </div>
 
         <div class="contact-info">
-          <p>Envoyez-nous un email ou contactez-nous pour une démo gratuite</p>
-          <p style="color: #3B6D11; font-weight: 600; margin-top: 10px;">contact@commande-ia.com</p>
+          <p>Ou contactez-nous directement pour une démo personnalisée gratuite :</p>
+          <a href="mailto:contact@commande-ia.com" class="contact-email">contact@commande-ia.com</a>
+        </div>
+
+        <div class="trust-badges">
+          <div class="trust-badge">🔒 RGPD Compliant</div>
+          <div class="trust-badge">✅ Sans engagement</div>
+          <div class="trust-badge">🇫🇷 Serveurs France</div>
+          <div class="trust-badge">📞 Support 7j/7</div>
         </div>
       </div>
     </section>
@@ -872,130 +966,352 @@
 
   <footer class="footer">
     <div class="footer-content">
-      <p>&copy; 2024 Commande-IA. Tous droits réservés.</p>
-      <p>Transformez votre restaurant avec l'IA</p>
+      <div class="footer-logo">
+        <div class="logo-icon-small">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M3 6h14M3 10h9M3 14h11" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <span>Commande<span class="logo-accent">IA</span></span>
+      </div>
+      <div class="footer-links">
+        <a href="#probleme">Le Problème</a>
+        <a href="#features">Fonctionnalités</a>
+        <a href="#pricing">Tarifs</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:contact@commande-ia.com">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="copyrightYear"></span> Commande-IA. Tous droits réservés. — Transformez votre restaurant avec l'IA.</p>
     </div>
   </footer>
 
-  <div class="modal" id="navigationModal">
+  <!-- BOUTON RETOUR EN HAUT -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</button>
+
+  <!-- TOAST NOTIFICATIONS -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- MODAL CONTACT -->
+  <div class="modal" id="navigationModal" role="dialog" aria-modal="true">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Je suis partant(e) !!</h2>
-        <button class="modal-close" id="btnCloseModal">✕</button>
+        <h2 id="modalTitle">Commençons ensemble</h2>
+        <button class="modal-close" id="btnCloseModal" aria-label="Fermer">✕</button>
       </div>
       <div class="modal-body">
-        <form id="contactForm" style="display: none;">
-          <div style="margin-bottom: 16px;">
-            <label style="display: block; font-size: 14px; font-weight: 600; color: #1a2a1a; margin-bottom: 6px;">Prénom</label>
-            <input type="text" id="formPrenom" placeholder="Votre prénom" style="width: 100%; padding: 10px; border: 1.5px solid #e0ecd8; border-radius: 8px; font-size: 14px; font-family: Inter, sans-serif;" required>
+
+        <!-- FORMULAIRE -->
+        <form id="contactForm" style="display:none;">
+          <div class="form-group">
+            <label>Prénom</label>
+            <input type="text" id="formPrenom" placeholder="Votre prénom" required>
           </div>
-          <div style="margin-bottom: 16px;">
-            <label style="display: block; font-size: 14px; font-weight: 600; color: #1a2a1a; margin-bottom: 6px;">Nom</label>
-            <input type="text" id="formNom" placeholder="Votre nom" style="width: 100%; padding: 10px; border: 1.5px solid #e0ecd8; border-radius: 8px; font-size: 14px; font-family: Inter, sans-serif;" required>
+          <div class="form-group">
+            <label>Nom</label>
+            <input type="text" id="formNom" placeholder="Votre nom" required>
           </div>
-          <div style="margin-bottom: 16px;">
-            <label style="display: block; font-size: 14px; font-weight: 600; color: #1a2a1a; margin-bottom: 6px;">Email</label>
-            <input type="email" id="formEmail" placeholder="votre@email.com" style="width: 100%; padding: 10px; border: 1.5px solid #e0ecd8; border-radius: 8px; font-size: 14px; font-family: Inter, sans-serif;" required>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="formEmail" placeholder="votre@email.com" required>
           </div>
-          <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-            <input type="checkbox" id="formCheckbox" style="width: 18px; height: 18px; cursor: pointer; accent-color: #3B6D11;">
-            <label for="formCheckbox" style="font-size: 14px; color: #1a2a1a; cursor: pointer; font-weight: 500;">Je suis partant(e) pour tester Commande-IA</label>
+          <div class="form-group">
+            <label>Restaurant</label>
+            <input type="text" id="formRestaurant" placeholder="Nom de votre restaurant">
           </div>
-          <button type="submit" class="btn btn-primary btn-full" style="margin-top: 10px; width: 100%; padding: 12px;">Envoyer ma demande</button>
+          <div class="form-checkbox">
+            <input type="checkbox" id="formCheckbox">
+            <label for="formCheckbox">Je souhaite tester Commande-IA et recevoir une démo gratuite</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top:16px;">Envoyer ma demande</button>
+          <button type="button" class="btn btn-secondary btn-full" id="btnBackToOptions" style="margin-top:8px;">← Retour</button>
         </form>
 
+        <!-- OPTIONS DE NAVIGATION -->
         <div class="nav-options" id="navOptions">
+          <div class="modal-cta-header">
+            <p>Que souhaitez-vous faire ?</p>
+          </div>
+          <button class="nav-option contact-option" id="btnOpenForm">
+            <div class="option-icon">✉️</div>
+            <div class="option-text">
+              <strong>Demander une démo gratuite</strong>
+              <p>On vous contacte sous 24h pour une présentation personnalisée</p>
+            </div>
+          </button>
           <button class="nav-option" id="navProbleme">
-            <div class="option-icon"></div>
+            <div class="option-icon">❓</div>
             <div class="option-text">
               <strong>Le Problème</strong>
-              <p>Comprendre les défis actuels</p>
+              <p>Comprendre les défis actuels des restaurants</p>
             </div>
           </button>
           <button class="nav-option" id="navSolution">
-            <div class="option-icon"></div>
+            <div class="option-icon">💡</div>
             <div class="option-text">
               <strong>La Solution</strong>
-              <p>Comment ça change tout</p>
+              <p>Comment Commande-IA change tout</p>
             </div>
           </button>
           <button class="nav-option" id="navFeatures">
-            <div class="option-icon"></div>
+            <div class="option-icon">🛠️</div>
             <div class="option-text">
               <strong>Fonctionnalités</strong>
-              <p>Ce que vous obtenez</p>
-            </div>
-          </button>
-          <button class="nav-option" id="navMarche">
-            <div class="option-icon"></div>
-            <div class="option-text">
-              <strong>Comment ça marche</strong>
-              <p>Le processus détaillé</p>
+              <p>Découvrir ce que vous obtenez</p>
             </div>
           </button>
           <button class="nav-option" id="navRentabilite">
-            <div class="option-icon"></div>
+            <div class="option-icon">📈</div>
             <div class="option-text">
               <strong>Rentabilité</strong>
-              <p>Voir vos gains</p>
-            </div>
-          </button>
-          <button class="nav-option" id="navAvantages">
-            <div class="option-icon"></div>
-            <div class="option-text">
-              <strong>Avantages</strong>
-              <p>Ce que vous gagnez</p>
+              <p>Calculer vos gains potentiels</p>
             </div>
           </button>
           <button class="nav-option" id="navDemo">
-            <div class="option-icon"></div>
+            <div class="option-icon">🎮</div>
             <div class="option-text">
               <strong>Démo Interactive</strong>
-              <p>Voyez-le en action</p>
+              <p>Tester le système en action</p>
             </div>
           </button>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary btn-full" id="btnModalPartant">Je suis partant(e) !!</button>
+
       </div>
     </div>
   </div>
 
   <script>
-    let demoOrders = [];
-    let demoOrderId = 0;
+    // =====================
+    // UTILITAIRES
+    // =====================
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = `toast toast-${type}`;
+      toast.textContent = message;
+      container.appendChild(toast);
+      setTimeout(() => toast.classList.add('show'), 10);
+      setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
+
+    // =====================
+    // COPYRIGHT ANNÉE DYNAMIQUE
+    // =====================
+    document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+    // =====================
+    // MODAL
+    // =====================
+    function openModal() {
+      const modal = document.getElementById('navigationModal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      showNavOptions();
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('navigationModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function showNavOptions() {
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('navOptions').style.display = 'flex';
+      document.getElementById('modalTitle').textContent = 'Commençons ensemble';
+    }
+
+    function showContactForm() {
+      document.getElementById('navOptions').style.display = 'none';
+      document.getElementById('contactForm').style.display = 'block';
+      document.getElementById('modalTitle').textContent = 'Demande de démo gratuite';
+    }
+
+    document.getElementById('navigationModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    document.getElementById('btnCloseModal').addEventListener('click', closeModal);
+    document.getElementById('btnOpenForm').addEventListener('click', showContactForm);
+    document.getElementById('btnBackToOptions').addEventListener('click', showNavOptions);
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const prenom = document.getElementById('formPrenom').value;
+      const nom = document.getElementById('formNom').value;
+      const email = document.getElementById('formEmail').value;
+      const restaurant = document.getElementById('formRestaurant').value;
+      const isChecked = document.getElementById('formCheckbox').checked;
+
+      if (!isChecked) {
+        showToast('Veuillez cocher la case pour continuer', 'error');
+        return;
+      }
+
+      const body = `Bonjour,%0A%0AJe souhaite tester Commande-IA.%0A%0APrénom: ${prenom}%0ANom: ${nom}%0AEmail: ${email}%0ARestaurant: ${restaurant}%0A%0AMerci`;
+      window.location.href = `mailto:contact@commande-ia.com?subject=Demande de démo — ${restaurant || 'Commande-IA'}&body=${body}`;
+
+      setTimeout(() => {
+        closeModal();
+        this.reset();
+        showToast('✉️ Votre demande a été envoyée !');
+      }, 500);
+    });
+
+    // Nav options dans modal
+    const navActions = {
+      navProbleme: 'probleme', navSolution: 'solution',
+      navFeatures: 'features', navRentabilite: 'rentabilite',
+      navDemo: 'demo'
+    };
+    Object.entries(navActions).forEach(([id, section]) => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('click', () => { closeModal(); scrollToSection(section); });
+    });
+
+    // =====================
+    // BOUTONS HERO & CTA
+    // =====================
+    document.getElementById('btnCommencer').addEventListener('click', () => scrollToSection('essai-gratuit'));
+    document.getElementById('btnVoirDemo').addEventListener('click', () => scrollToSection('demo'));
+    document.getElementById('btnPartant').addEventListener('click', openModal);
+    document.getElementById('btnSavoirPlus').addEventListener('click', () => scrollToSection('features'));
+
+    // =====================
+    // MENU HAMBURGER MOBILE
+    // =====================
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    function openMobileMenu() {
+      navMenu.classList.add('open');
+      hamburger.classList.add('open');
+      mobileOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      navMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      mobileOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.contains('open') ? closeMobileMenu() : openMobileMenu();
+    });
+
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // =====================
+    // PRICING BUTTONS → CTA
+    // =====================
+    document.querySelectorAll('.pricing-btn').forEach(btn => {
+      btn.addEventListener('click', openModal);
+    });
+
+    // =====================
+    // FAQ ACCORDION
+    // =====================
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', function() {
+        const faqItem = this.closest('.faq-item');
+        const isActive = faqItem.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+        if (!isActive) faqItem.classList.add('active');
+      });
+    });
+
+    // =====================
+    // SLIDER RENTABILITÉ
+    // =====================
+    const phases = [
+      { temps: 2, commandes: 5, revenu: 75, roi: 5, desc: '🚀 Jour 1 — Les premières commandes arrivent ! Vos équipes gagnent du temps immédiatement.' },
+      { temps: 8, commandes: 25, revenu: 375, roi: 15, desc: '📈 Semaine 1 — Les résultats se voient. Vos clients apprécient la rapidité !' },
+      { temps: 14, commandes: 50, revenu: 750, roi: 25, desc: '✅ 2 Semaines — Efficacité confirmée. Vous traitez 3x plus de commandes sans effort.' },
+      { temps: 40, commandes: 200, revenu: 3000, roi: 60, desc: '💰 Mois 1 — Rentable ! Le retour sur investissement est clairement visible.' },
+      { temps: 120, commandes: 600, revenu: 9000, roi: 120, desc: '🎯 3 Mois — Vos revenus ont triplé. Vos équipes sont motivées et organisées !' },
+      { temps: 240, commandes: 1200, revenu: 18000, roi: 200, desc: '🏆 6 Mois — Succès total. Votre restaurant fonctionne à un autre niveau.' },
+      { temps: 480, commandes: 2400, revenu: 36000, roi: 350, desc: '👑 1 An — Félicitations ! Revenus multipliés par 3+. L\'investissement est largement amorti !' }
+    ];
+
+    const slider = document.getElementById('rentabiliteSlider');
+
+    function animateValue(el, target, suffix = '') {
+      const start = parseInt(el.textContent) || 0;
+      const duration = 400;
+      const step = (target - start) / (duration / 16);
+      let current = start;
+      const timer = setInterval(() => {
+        current += step;
+        if ((step > 0 && current >= target) || (step < 0 && current <= target)) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = Math.round(current) + suffix;
+      }, 16);
+    }
+
+    function updateRentabilite() {
+      const index = Math.round((parseInt(slider.value) / 100) * (phases.length - 1));
+      const phase = phases[index];
+      animateValue(document.getElementById('statTemps'), phase.temps);
+      animateValue(document.getElementById('statCommandes'), phase.commandes);
+      const revenuEl = document.getElementById('statRevenu');
+      const currentRevenu = parseInt(revenuEl.textContent) || 0;
+      animateValue({ get textContent() { return String(currentRevenu); }, set textContent(v) { revenuEl.textContent = v + '€'; } }, phase.revenu);
+      animateValue(document.getElementById('statROI'), phase.roi, '%');
+      document.getElementById('rentabiliteDesc').innerHTML = `<p>${phase.desc}</p>`;
+    }
+
+    slider.addEventListener('input', updateRentabilite);
+
+    // =====================
+    // DÉMO INTERACTIVE
+    // =====================
+    let demoOrders = [], demoOrderId = 0;
     const demoData = [
-      { name: 'M. Dupont', dishes: 'Burger + Frites' },
-      { name: 'Mme Martin', dishes: 'Pizza Margherita' },
-      { name: 'Jean Petit', dishes: 'Steak + Salade' },
-      { name: 'Sophie Laurent', dishes: 'Poulet rôti + légumes' },
-      { name: 'M. Bernard', dishes: 'Pâtes Carbonara' }
+      { name: 'M. Dupont', dishes: '🍔 Burger + Frites' },
+      { name: 'Mme Martin', dishes: '🍕 Pizza Margherita' },
+      { name: 'Jean Petit', dishes: '🥩 Steak + Salade' },
+      { name: 'Sophie Laurent', dishes: '🍗 Poulet rôti + légumes' },
+      { name: 'M. Bernard', dishes: '🍝 Pâtes Carbonara' },
+      { name: 'Claire Morin', dishes: '🥗 Salade Niçoise' },
+      { name: 'Paul Duval', dishes: '🍣 Plateau Sushi' }
     ];
 
     function addDemoOrder() {
       const randomData = demoData[Math.floor(Math.random() * demoData.length)];
-      const order = {
-        id: demoOrderId++,
-        name: randomData.name,
-        dishes: randomData.dishes,
-        status: 'new',
-        time: Math.floor(Math.random() * 25) + 5
-      };
+      const order = { id: demoOrderId++, name: randomData.name, dishes: randomData.dishes, status: 'new', time: Math.floor(Math.random() * 20) + 5 };
       demoOrders.push(order);
-      if (demoOrders.length > 6) demoOrders.shift();
+      if (demoOrders.length > 8) demoOrders.shift();
       renderDemoOrders();
+      showToast(`📞 Nouvelle commande — ${order.name}`);
     }
 
     function updateDemoOrder() {
-      if (demoOrders.length === 0) return;
-      const randomIdx = Math.floor(Math.random() * demoOrders.length);
+      if (demoOrders.length === 0) { showToast('Ajoutez des commandes d\'abord', 'info'); return; }
+      const idx = Math.floor(Math.random() * demoOrders.length);
       const statuses = ['new', 'prep', 'ready'];
-      const currentIdx = statuses.indexOf(demoOrders[randomIdx].status);
+      const currentIdx = statuses.indexOf(demoOrders[idx].status);
       if (currentIdx < statuses.length - 1) {
-        demoOrders[randomIdx].status = statuses[currentIdx + 1];
+        demoOrders[idx].status = statuses[currentIdx + 1];
+        const labels = { prep: 'En préparation', ready: 'Prête !' };
+        showToast(`📝 ${demoOrders[idx].name} — ${labels[demoOrders[idx].status]}`);
       } else {
-        demoOrders.splice(randomIdx, 1);
+        const name = demoOrders[idx].name;
+        demoOrders.splice(idx, 1);
+        showToast(`💬 SMS envoyé à ${name} — Commande récupérée`);
       }
       renderDemoOrders();
     }
@@ -1009,176 +1325,113 @@
     function renderDemoOrders() {
       const container = document.getElementById('demo-orders');
       if (demoOrders.length === 0) {
-        container.innerHTML = '<div class="demo-empty"><p>Aucune commande pour le moment</p><p style="font-size: 12px; color: #9ab89a; margin-top: 10px;">Cliquez sur "Ajouter une commande" pour commencer</p></div>';
+        container.innerHTML = '<div class="demo-empty"><div class="demo-empty-icon">📋</div><p>Aucune commande pour le moment</p><p class="demo-empty-hint">Cliquez sur "Ajouter une commande" pour commencer la simulation</p></div>';
       } else {
+        const statusMap = {
+          new: { badge: 'NOUVELLE', cls: 'badge-new' },
+          prep: { badge: 'EN PREP', cls: 'badge-prep' },
+          ready: { badge: '✓ PRÊTE', cls: 'badge-ready' }
+        };
         container.innerHTML = demoOrders.map(order => {
-          const statusMap = {'new': { badge: 'NOUVELLE', class: 'new' }, 'prep': { badge: 'EN PREP', class: 'prep' }, 'ready': { badge: 'PRÊTE', class: 'ready' }};
-          const status = statusMap[order.status];
-          const initials = order.name.split(' ').map(n => n[0]).join('').toUpperCase();
-          return `<div class="demo-card ${order.status === 'ready' ? 'ready' : ''}"><div class="demo-card-header"><div class="demo-avatar">${initials}</div><div class="demo-name">${order.name}</div></div><div class="demo-content">${order.dishes}</div><div style="display: flex; justify-content: space-between; align-items: center;"><span class="demo-badge ${status.class}">${status.badge}</span><span style="font-size: 11px; color: #9ab89a;">~${order.time}min</span></div></div>`;
+          const st = statusMap[order.status];
+          const initials = order.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+          return `<div class="demo-card card-${order.status}">
+            <div class="demo-card-header">
+              <div class="demo-avatar">${initials}</div>
+              <div class="demo-name">${order.name}</div>
+              <span class="demo-time">~${order.time}min</span>
+            </div>
+            <div class="demo-content">${order.dishes}</div>
+            <span class="demo-badge ${st.cls}">${st.badge}</span>
+          </div>`;
         }).join('');
       }
-      const total = demoOrders.length;
       const ready = demoOrders.filter(o => o.status === 'ready').length;
-      document.getElementById('demo-count').textContent = total - ready;
+      document.getElementById('demo-count').textContent = demoOrders.length - ready;
       document.getElementById('demo-ready').textContent = ready;
     }
 
-    function scrollToSection(id) {
-      const element = document.getElementById(id);
-      if (element) element.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.getElementById('btnAdd').addEventListener('click', addDemoOrder);
+    document.getElementById('btnUpdate').addEventListener('click', updateDemoOrder);
+    document.getElementById('btnClear').addEventListener('click', clearDemoOrders);
 
-    function openModal() {
-      document.getElementById('navigationModal').classList.add('active');
-    }
+    // =====================
+    // BOUTON RETOUR EN HAUT
+    // =====================
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTopBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    function closeModal() {
-      document.getElementById('navigationModal').classList.remove('active');
-    }
+    // =====================
+    // ACTIVE NAV AU SCROLL
+    // =====================
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
-    function openContactForm() {
-      openModal();
-      document.getElementById('contactForm').style.display = 'block';
-      document.getElementById('navOptions').style.display = 'none';
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const hamburger = document.getElementById('hamburger');
-      const navMenu = document.getElementById('navMenu');
-      const modal = document.getElementById('navigationModal');
-
-      if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-          navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-        });
-      }
-
-      document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', function() {
-    if (navMenu && window.innerWidth <= 1024) {
-      navMenu.style.display = 'none';
-    }
-  });
-});
-
-      document.getElementById('btnCommencer').addEventListener('click', function() {
-        scrollToSection('contact');
+    function updateActiveNav() {
+      let current = '';
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 120) current = section.getAttribute('id');
       });
-
-      document.getElementById('btnAdd').addEventListener('click', addDemoOrder);
-      document.getElementById('btnUpdate').addEventListener('click', updateDemoOrder);
-      document.getElementById('btnClear').addEventListener('click', clearDemoOrders);
-
-      document.getElementById('btnPartant').addEventListener('click', openContactForm);
-      document.getElementById('btnSavoirPlus').addEventListener('click', openContactForm);
-
-      document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const prenom = document.getElementById('formPrenom').value;
-        const nom = document.getElementById('formNom').value;
-        const email = document.getElementById('formEmail').value;
-        const isChecked = document.getElementById('formCheckbox').checked;
-
-        if (!isChecked) {
-          alert('Veuillez cocher "Je suis partant(e)" pour continuer');
-          return;
-        }
-
-        const mailtoLink = `mailto:contact@commande-ia.com?subject=Demande%20de%20démo%20Commande-IA&body=Bonjour,%0A%0AJe souhaite tester Commande-IA.%0A%0APrénom: ${prenom}%0ANom: ${nom}%0AEmail: ${email}%0A%0AMerci`;
-        
-        window.location.href = mailtoLink;
-        
-        setTimeout(() => {
-          closeModal();
-          document.getElementById('contactForm').reset();
-          document.getElementById('contactForm').style.display = 'none';
-          document.getElementById('navOptions').style.display = 'block';
-        }, 500);
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
       });
+    }
 
-      document.getElementById('btnModalPartant').addEventListener('click', function() {
-        closeModal();
-        scrollToSection('demo');
-      });
+    window.addEventListener('scroll', updateActiveNav);
 
-      document.getElementById('btnCloseModal').addEventListener('click', function() {
-        closeModal();
-        document.getElementById('contactForm').style.display = 'none';
-        document.getElementById('navOptions').style.display = 'block';
-      });
-
-      document.getElementById('navProbleme').addEventListener('click', function() { closeModal(); scrollToSection('probleme'); });
-      document.getElementById('navSolution').addEventListener('click', function() { closeModal(); scrollToSection('solution'); });
-      document.getElementById('navFeatures').addEventListener('click', function() { closeModal(); scrollToSection('features'); });
-      document.getElementById('navMarche').addEventListener('click', function() { closeModal(); scrollToSection('comment-ca-marche'); });
-      document.getElementById('navRentabilite').addEventListener('click', function() { closeModal(); scrollToSection('rentabilite'); });
-      document.getElementById('navAvantages').addEventListener('click', function() { closeModal(); scrollToSection('avantages'); });
-      document.getElementById('navDemo').addEventListener('click', function() { closeModal(); scrollToSection('demo'); });
-
-      if (modal) {
-        modal.addEventListener('click', function(e) {
-          if (e.target === modal) closeModal();
-        });
-      }
-
-      // SLIDER RENTABILITÉ
-      const slider = document.getElementById('rentabiliteSlider');
-      const statTemps = document.getElementById('statTemps');
-      const statCommandes = document.getElementById('statCommandes');
-      const statRevenu = document.getElementById('statRevenu');
-      const statROI = document.getElementById('statROI');
-      const rentabiliteDesc = document.getElementById('rentabiliteDesc');
-
-      const phases = [
-        { label: 'Jour 1', temps: 2, commandes: 5, revenu: 75, roi: 5, desc: '🚀 Les premières commandes arrivent ! Vos équipes gagnent du temps immédiatement.' },
-        { label: 'Semaine 1', temps: 8, commandes: 25, revenu: 375, roi: 15, desc: '📈 Les résultats commencent à se voir. Vos clients apprécient la rapidité !' },
-        { label: '2 Semaines', temps: 14, commandes: 50, revenu: 750, roi: 25, desc: '✅ Efficacité confirmée. Vous traitez 3x plus de commandes facilement.' },
-        { label: 'Mois 1', temps: 40, commandes: 200, revenu: 3000, roi: 60, desc: '💰 Le mois 1 est rentable ! Vous voyez clairement le retour sur investissement.' },
-        { label: '3 Mois', temps: 120, commandes: 600, revenu: 9000, roi: 120, desc: '🎯 Vous avez triplé vos revenus. Vos équipes sont motivées et organisées !' },
-        { label: '6 Mois', temps: 240, commandes: 1200, revenu: 18000, roi: 200, desc: '🏆 C\'est un succès ! Votre restaurant fonctionne à un autre niveau.' },
-        { label: '1 An', temps: 480, commandes: 2400, revenu: 36000, roi: 350, desc: '👑 Félicitations ! Vous avez multiplié vos revenus annuels par 3+. L\'investissement est amorti !' }
-      ];
-
-      function updateRentabilite() {
-        const value = parseInt(slider.value);
-        const index = Math.round((value / 100) * (phases.length - 1));
-        const phase = phases[index];
-
-        if (statTemps) statTemps.textContent = phase.temps;
-        if (statCommandes) statCommandes.textContent = phase.commandes;
-        if (statRevenu) statRevenu.textContent = phase.revenu + '€';
-        if (statROI) statROI.textContent = phase.roi + '%';
-        if (rentabiliteDesc) rentabiliteDesc.innerHTML = `<p>${phase.desc}</p>`;
-      }
-
-      if (slider) {
-        slider.addEventListener('input', updateRentabilite);
-        updateRentabilite();
-      }
-
-      setTimeout(() => { addDemoOrder(); setTimeout(() => { addDemoOrder(); setTimeout(() => { addDemoOrder(); }, 500); }, 500); }, 300);
+    // =====================
+    // HEADER SCROLL EFFECT
+    // =====================
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    document.querySelectorAll('.pricing-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    scrollToSection('essai-gratuit');
-  });
-});
+    // =====================
+    // ANIMATIONS AU SCROLL
+    // =====================
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-document.querySelectorAll('.faq-question').forEach(question => {
-  question.addEventListener('click', function() {
-    const faqItem = this.closest('.faq-item');
-    const isActive = faqItem.classList.contains('active');
-    
-    document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
-    
-    if (!isActive) {
-      faqItem.classList.add('active');
-    }
-  });
-});
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+    // =====================
+    // COMPTEURS STATS BAR
+    // =====================
+    const countersObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.count);
+          let current = 0;
+          const increment = target / 40;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.textContent = Math.round(current);
+          }, 30);
+          countersObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('[data-count]').forEach(el => countersObserver.observe(el));
+
+    // =====================
+    // INIT DÉMO AU CHARGEMENT
+    // =====================
+    setTimeout(() => addDemoOrder(), 600);
+    setTimeout(() => addDemoOrder(), 1200);
+    setTimeout(() => addDemoOrder(), 1800);
   </script>
 </body>
 </html>
